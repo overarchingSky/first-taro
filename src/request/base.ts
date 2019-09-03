@@ -1,6 +1,7 @@
+import { error } from './../utils/log';
 import serve from ''
 import Taro from '@tarojs/taro'
-export function baseOptions(params:obj, method:Methods = 'GET') : Promise<any> {
+export function base(params:obj, method:Methods = 'GET') : Promise<any> {
     let { url, data } = params
     let contentType = 'application/x-www-form-urlencoded'
     contentType = params.contentType || contentType
@@ -14,7 +15,7 @@ export function baseOptions(params:obj, method:Methods = 'GET') : Promise<any> {
 
         },
         error(e) {
-            logError('api', '请求接口出现问题', e)
+            error('api', '请求接口出现问题', e)
         }
     }
     return Taro.request(option)
