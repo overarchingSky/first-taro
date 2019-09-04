@@ -9,23 +9,20 @@ import Taro from '@tarojs/taro';
  *          请求成功dispatch { type: ${actionType}, payload: ${resolveData} }
  *          请求失败dispatch { type: ${actionType}_failure, payload: ${rejectData} }
  */
-export function createApiAction(actionType, func = () => {}) {
+export function createApiAction(actionType, func = (args:any) => {}) {
   return (
     params = {},
-    callback = { success: () => {}, failed: () => {} },
     customActionType = actionType,
   ) => async (dispatch) => {
     try {
       dispatch({ type: `${customActionType  }_request`, params });
       const data = await func(params);
       dispatch({ type: customActionType, params, payload: data });
-
-      callback.success && callback.success({ payload: data })
       return data
     } catch (e) {
+      // 显示错误页面
       dispatch({ type: `${customActionType  }_failure`, params, payload: e })
-
-      callback.failed && callback.failed({ payload: e })
+      return Promise.reject(e)
     }
   }
 }
@@ -35,3 +32,5 @@ export function setToken (token:string):void{
 }
   //使用方式
   //export const list = createApiAction(LIST, params => api.get('news/list', params))
+  //页面：
+  //list(params)
