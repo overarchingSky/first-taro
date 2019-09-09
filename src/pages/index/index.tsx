@@ -6,6 +6,7 @@ import { connect } from '@tarojs/redux'
 import { add, minus, asyncAdd } from '../../actions/counter'
 
 import './index.less'
+import { login } from '../../auth/action';
 // #region 书写注意
 //
 // 目前 typescript 版本还无法在装饰器模式下将 Props 注入到 Taro.Component 中的 props 属性
@@ -48,7 +49,8 @@ interface Index {
     dispatch(minus())
   },
   asyncAdd () {
-    dispatch(asyncAdd())
+    dispatch(login({a:10}))
+    //dispatch(asyncAdd())
   }
 }))
 class Index extends Component {
@@ -77,11 +79,12 @@ class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Button className='add_btn' onClick={this.props.add}>+</Button>
+        <Button className='add_btn' onClick={this.props.add}>+ </Button>
         <Button className='dec_btn' onClick={this.props.dec}>-</Button>
         <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
         <View><Text>{this.props.counter.num}</Text></View>
-        <View><Text>Hello, World</Text></View>
+        <View><Text>Hello, World  ++</Text></View>
+        <Button className='dec_btn' onClick={_ => Taro.navigateTo({url:'comp'})}>to comp</Button>
       </View>
     )
   }

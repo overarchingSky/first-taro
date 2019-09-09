@@ -1,4 +1,5 @@
 import Taro from '@tarojs/taro';
+import { fetch } from './fetch';
 /**
  * 创建API Action
  *
@@ -9,7 +10,7 @@ import Taro from '@tarojs/taro';
  *          请求成功dispatch { type: ${actionType}, payload: ${resolveData} }
  *          请求失败dispatch { type: ${actionType}_failure, payload: ${rejectData} }
  */
-export function createApiAction(actionType, func = (args:any) => {}) {
+export function createApiAction(actionType, func = fetch) {
   return (
     params = {},
     customActionType = actionType,
@@ -34,3 +35,5 @@ export function setToken (token:string):void{
   //export const list = createApiAction(LIST, params => api.get('news/list', params))
   //页面：
   //list(params)
+
+

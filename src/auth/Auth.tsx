@@ -1,31 +1,11 @@
-import Taro, { Component, useReducer, useRef } from '@tarojs/taro';
-import { useEffect, useState } from 'react';
 import { storage } from '../utils/storage';
-
-var ref
-
-export async function withLoginComponent(Comp){
-    let isLogin:boolean = (await storage.get('$_login')) === 'true'
-    let [ login, setLogin] = useState( isLogin )
-    // 利用useRef将setLogin方法引用暂时持久化（持续整个项目生命周期）
-    ref = useRef (setLogin)
-    useEffect(function(){
-        if(!login){
-            // 如果能自动登录，调用登录接口登录
-            
-        } else {
-            // 跳转到登录
-            Taro.navigateTo({
-                url:'/login'
-            })
-        }
-    })
-    return (
-        <Comp />
-    )
-}
+import { store } from './../store/index';
+import thunkMiddleware from 'redux-thunk'
+import { login } from './action'
+import { toast } from '../utils/toast';
 
 export class Auth {
+    static setLogin: Taro.Dispatch<Taro.SetStateAction<boolean>>
     constructor(options:obj){
         
     }
@@ -33,8 +13,14 @@ export class Auth {
      * 登录
      * @param params 登录参数
      */
-    login = async function(params){
-        storage.set('$_login',true)
+    login = async function(params?:obj){
+        try {
+            await thunkMiddleware(store)(store.dispatch)(login(params))
+            storage.set('$_login',true)
+        } catch (error) {
+            toast.error(error)
+        }
+       
     }
 
     /**
@@ -42,8 +28,7 @@ export class Auth {
      */
     logout = function (){
         //清除登录状态
-        let setLogin = ref.current
-        setLogin(false)
+        Auth.setLogin(false)
         storage.set('$_login',false)
     }
 
@@ -65,4 +50,19 @@ export class Auth {
             return Promise.reject(error)
         }
     }
+    /**
+     * 是否已登录
+     */
+    hasLogined = async function(){
+        const logined = (await storage.get('$_login')) === 'true'
+        return logined
+    }
+    /**
+     * 是否允许自动登录
+     */
+    autoLogin = async function(){
+        const autoLogin = (await storage.get('$_autoLogin')) === 'true'
+        return autoLogin
+    }
 }
+
