@@ -1,3 +1,20 @@
+
+const mode = process.env.npm_config_mode
+console.log('++++++++++',process.env.npm_config_mode)
+let loadEnv  = require('../script/env')
+// 加载env配置文件，执行结果保存在process.env中
+// 先加载的具有优先权，加入先后执行loadEvn('prod');loadEvn('dev')，那么最终结果为prod的
+loadEnv(mode)
+loadEnv()
+let USER_ENV = {}
+Object.keys(process.env).forEach(key => {
+  if(/TARO_APP_/.test(key)){
+    USER_ENV[key] = JSON.stringify(process.env[key])
+  }
+})
+
+
+
 const config = {
   projectName: 'first-taro',
   date: '2019-9-2',
@@ -25,6 +42,7 @@ const config = {
     }
   },
   defineConstants: {
+    ...USER_ENV
   },
   copy: {
     patterns: [

@@ -72,7 +72,10 @@ class Index extends Component {
 
   componentWillUnmount () { }
 
-  componentDidShow () { }
+  componentDidShow () { 
+    //@ts-ignore 
+    console.log('api env',TARO_APP_API)
+  }
 
   componentDidHide () { }
 
@@ -83,7 +86,7 @@ class Index extends Component {
         <Button className='dec_btn' onClick={this.props.dec}>-</Button>
         <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
         <View><Text>{this.props.counter.num}</Text></View>
-        <View><Text>Hello, World  ++</Text></View>
+        <View><Text>Hello, World  {TARO_APP_ABC}</Text></View>
         <Button className='dec_btn' onClick={_ => Taro.navigateTo({url:'comp'})}>to comp</Button>
       </View>
     )

@@ -8,6 +8,9 @@ import {store} from './store'
 
 import './app.less'
 
+//@ts-ignore
+console.warn('env:',TARO_APP_ENV)
+
 class App extends Component {
 
   /**
