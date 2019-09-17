@@ -87,7 +87,7 @@ class Index extends Component {
         <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
         <View><Text>{this.props.counter.num}</Text></View>
         <View><Text>Hello, World  {TARO_APP_ABC}</Text></View>
-        <Button className='dec_btn' onClick={_ => Taro.navigateTo({url:'comp'})}>to comp</Button>
+        <Button className='dec_btn' onClick={_ => Taro.navigateTo({url:'test'})}>to test</Button>
       </View>
     )
   }
