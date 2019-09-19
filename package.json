@@ -1,6 +1,6 @@
 {
   "name": "first-taro",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "private": true,
   "description": "",
   "templateInfo": {
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "commit": "git commit -m ''",
-    "release": "standard-version -- --no-verify",
+    "release": "npx standard-version --no-verify",
     "test": "jest",
     "weapp": "taro build --type weapp",
     "swan": "taro build --type swan",
