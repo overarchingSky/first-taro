@@ -6,3 +6,21 @@
 - 添加一系列通用工具方法（src/utils/）
 - 拓展cli，支持通过.env、.env.***的方式配置环境参数
 *注：在项目中使用的环境变量，必须以TARO_APP_为前缀，如：TARO_APP_API否则，将只能在构建期间访问*
+- 优化git commit 格式
+- 自动生成changeLog
+
+
+
+git commit：
+
+feat 新功能
+fix Bug 修复
+docs 文档更新
+style 代码的格式，标点符号的更新
+refactor 代码重构
+perf 性能优化
+test 测试更新
+build 构建系统或者包依赖更新
+ci CI 配置，脚本文件等更新
+chore 非 src 或者 测试文件的更新
+revert commit 回退
