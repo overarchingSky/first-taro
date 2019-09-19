@@ -96,7 +96,7 @@
   },
   "husky": {
     "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty &&  npx git cz --hook"
+      "prepare-commit-msg":"exec < /dev/tty &&  npx git cz --hook || true; exit"
     }
   },
   "jest": {
