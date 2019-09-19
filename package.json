@@ -15,7 +15,7 @@
   },
   "scripts": {
     "commit": "git commit -m ''",
-    "release": "standard-version",
+    "release": "standard-version --no-verify",
     "test": "jest",
     "weapp": "taro build --type weapp",
     "swan": "taro build --type swan",
@@ -98,7 +98,9 @@
     "typescript": "^3.6.3"
   },
   "husky": {
-    "hooks": {}
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty &&  git cz --hook || true "
+    }
   },
   "jest": {
     "moduleFileExtensions": [
