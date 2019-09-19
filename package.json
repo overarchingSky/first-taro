@@ -14,7 +14,7 @@
     }
   },
   "scripts": {
-    "commit":"git cz",
+    "commit":"git cz -m",
     "test": "jest",
     "weapp": "taro build --type weapp",
     "swan": "taro build --type swan",
@@ -97,7 +97,7 @@
   },
   "husky": {
     "hooks": {
-      "prepare-commit-msg":"exec < /dev/tty &&  npx git cz --hook || true;"
+      "prepare-commit-msg":"exec < /dev/tty &&  npx git cz -m --hook || true;"
     }
   },
   "jest": {
