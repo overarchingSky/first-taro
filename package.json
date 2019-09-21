@@ -1,6 +1,6 @@
 {
   "name": "first-taro",
-  "version": "1.1.9",
+  "version": "1.2.0",
   "private": true,
   "description": "",
   "templateInfo": {
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "commit": "git commit -m ''",
-    "release": "standard-version --no-verify",
+    "release": "standard-version -- --no-verify",
     "test": "jest",
     "weapp": "taro build --type weapp",
     "swan": "taro build --type swan",
@@ -99,7 +99,7 @@
   },
   "husky": {
     "hooks": {
-      "prepare-commit-msg": "sudo sh ./script/commit.sh "
+      "prepare-commit-msg": "node ./script/commit.js"
     }
   },
   "jest": {
