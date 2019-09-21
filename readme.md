@@ -11,6 +11,9 @@
 - 使用lint-staged只检查当前改动文件格式
 - 测试覆盖率以及报告https://www.kancloud.cn/sllyli/npm-script/1243454 nyc
 
+
+HUSKY_SKIP_HOOKS
+
 开发流程说明：
 - 代码提交 统一使用yarn commit提交代码
 
