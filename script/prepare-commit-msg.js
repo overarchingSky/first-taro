@@ -6,6 +6,6 @@ if(process.env.allowGitCommit){
     shelljs.exec(`exit 1 | cross-env allowGitCommit=true git commit -m ''`) 
     return
 }
-if(!process.env.noVerifyHook){
+if(!process.env.noVerifyHook){ 
     shelljs.exec(`exec < /dev/tty &&  git cz --hook || true`)
 }
