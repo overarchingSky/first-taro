@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.10](https://github.com/overarchingSky/first-taro/compare/v1.1.9...v1.1.10) (2019-09-21)
+
 ### [1.1.9](https://github.com/overarchingSky/first-taro/compare/v1.1.7...v1.1.9) (2019-09-21)
 
 ### [1.1.8](https://github.com/overarchingSky/first-taro/compare/v1.1.7...v1.1.8) (2019-09-21)
