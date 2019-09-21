@@ -5,6 +5,6 @@ if(process.env.allowGitCommit){
     shelljs.exec(`yarn commit`)
     return 'exit 1'
 }
-if(!process.env.noVerifyHook){
+if(!process.env.noVerifyHook){ 
     shelljs.exec(`exec < /dev/tty &&  git cz --hook || true`)
 }
