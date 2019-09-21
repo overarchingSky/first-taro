@@ -1,5 +1,6 @@
+const shelljs = require('shelljs')
 if(process.env.allowGitCommit){
     
 }else{
-    shelljs(`exit(1) && yarn commit`)
+    shelljs.exec(`echo exit(1) && yarn commit`)
 }

@@ -101,7 +101,7 @@
   },
   "husky": {
     "hooks": {
-      "git-commit":"node ./script/commit.js",
+      "pre-commit":"node ./script/commit.js",
       "prepare-commit-msg": "node ./script/prepare-commit-msg.js"
     }
   },
