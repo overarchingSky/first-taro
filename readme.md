@@ -9,10 +9,10 @@
 - 优化git commit 格式
 - 自动生成changeLog
 
+开发流程说明：
+- 代码提交 统一使用yarn commit提交代码
 
-
-git commit：
-
+commit选项说明：
 feat 新功能
 fix Bug 修复
 docs 文档更新
@@ -24,6 +24,3 @@ build 构建系统或者包依赖更新
 ci CI 配置，脚本文件等更新
 chore 非 src 或者 测试文件的更新
 revert commit 回退
-
-
-      "prepare-commit-msg": "exec < /dev/tty &&  npx git cz --hook || true"
