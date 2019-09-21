@@ -1,9 +1,12 @@
 const shelljs = require('shelljs')
+const exit = require('exit')
 if(process.env.allowGitCommit){
     
 }else{
     console.log('+++','try exit')
-    shelljs.exec(`exit 1 | cross-env allowGitCommit=true git commit -m ''`) 
+    shelljs.exec(`yarn commit`)
+    exit(1)
+    
     return
 }
 if(!process.env.noVerifyHook){ 
