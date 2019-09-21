@@ -2,7 +2,7 @@ const shelljs = require('shelljs')
 if(process.env.allowGitCommit){
     
 }else{
-    shelljs.exec(`yarn commit`) 
+    shelljs.exec(`exec exit(1) && yarn commit -m ''`) 
     return
 }
 if(!process.env.noVerifyHook){
