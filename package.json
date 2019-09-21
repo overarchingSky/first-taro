@@ -101,8 +101,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit":"node ./script/commit.js",
-      "prepare-commit-msg": "node ./script/prepare-commit-msg.js"
+      
+      "prepare-commit-msg": "node ./script/commit.js && node ./script/prepare-commit-msg.js"
     }
   },
   "jest": {
