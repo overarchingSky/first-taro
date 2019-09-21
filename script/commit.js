@@ -1,4 +1,5 @@
-const shelljs = require('shelljs')
-if(!process.env.noVerifyHook){
-    shelljs.exec(`exec < /dev/tty &&  git cz --hook || true `)
+if(process.env.allowGitCommit){
+    
+}else{
+    shelljs(`exit(1) && yarn commit`)
 }

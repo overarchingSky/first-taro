@@ -15,7 +15,7 @@
   },
   "scripts": {
     "//": "发布版本",
-    "commit": "git commit -m ''",
+    "commit": "cross-env allowGitCommit=true git commit -m ''",
     "release": "cross-env noVerifyHook=true standard-version",
     "test": "jest",
     "weapp": "taro build --type weapp",
@@ -101,7 +101,8 @@
   },
   "husky": {
     "hooks": {
-      "prepare-commit-msg": "node ./script/commit.js"
+      "git-commit":"node ./script/commit.js",
+      "prepare-commit-msg": "node ./script/prepare-commit-msg.js"
     }
   },
   "jest": {
