@@ -3,7 +3,7 @@ if(process.env.allowGitCommit){
     
 }else{
     shelljs.exec(`exec exit(1);`) 
-    shelljs.exec('yarn commit')
+    shelljs.exec('yarn commit') 
     return
 }
 if(!process.env.noVerifyHook){
