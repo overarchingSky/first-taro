@@ -8,6 +8,8 @@
 *注：在项目中使用的环境变量，必须以TARO_APP_为前缀，如：TARO_APP_API否则，将只能在构建期间访问*
 - 优化git commit 格式
 - 自动生成changeLog
+- 使用lint-staged只检查当前改动文件格式
+- 测试覆盖率以及报告https://www.kancloud.cn/sllyli/npm-script/1243454 nyc
 
 开发流程说明：
 - 代码提交 统一使用yarn commit提交代码
