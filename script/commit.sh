@@ -1,1 +1,3 @@
-exit 1
+#!/usr/bin/env node
+
+echo 'commit ...'
