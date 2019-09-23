@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/overarchingSky/first-taro/compare/v1.2.12...v1.3.0) (2019-09-23)
+
+
+### Bug Fixes
+
+* da ([9267ec2](https://github.com/overarchingSky/first-taro/commit/9267ec2))
+* **g:** g ([fc0f64b](https://github.com/overarchingSky/first-taro/commit/fc0f64b))
+* **qq:** qq ([6a38c27](https://github.com/overarchingSky/first-taro/commit/6a38c27))
+* s ([01422f3](https://github.com/overarchingSky/first-taro/commit/01422f3))
+* sdfa ([724c838](https://github.com/overarchingSky/first-taro/commit/724c838))
+
+
+### Features
+
+* **as:** as ([35cc999](https://github.com/overarchingSky/first-taro/commit/35cc999))
+* **bbb:** bbb ([583fef5](https://github.com/overarchingSky/first-taro/commit/583fef5))
+* **h:** h ([5f73d6f](https://github.com/overarchingSky/first-taro/commit/5f73d6f))
+* **hhh:** hhh ([f42635b](https://github.com/overarchingSky/first-taro/commit/f42635b))
+* ds ([921dfde](https://github.com/overarchingSky/first-taro/commit/921dfde))
+* **r:** r ([9ff1ab9](https://github.com/overarchingSky/first-taro/commit/9ff1ab9))
+* **sdf:** sdf ([60560aa](https://github.com/overarchingSky/first-taro/commit/60560aa))
+* sdf ([24c3fa9](https://github.com/overarchingSky/first-taro/commit/24c3fa9))
+* sdf ([8ff8e0c](https://github.com/overarchingSky/first-taro/commit/8ff8e0c))
+* ww ([f143389](https://github.com/overarchingSky/first-taro/commit/f143389))
+* **t:** t ([aac3593](https://github.com/overarchingSky/first-taro/commit/aac3593))
+* **v:** v ([9ad2824](https://github.com/overarchingSky/first-taro/commit/9ad2824))
+* **x:** x ([dba6ff8](https://github.com/overarchingSky/first-taro/commit/dba6ff8))
+* **y:** y ([d0e0acd](https://github.com/overarchingSky/first-taro/commit/d0e0acd))
+
 ### [1.2.12](https://github.com/overarchingSky/first-taro/compare/v1.2.11...v1.2.12) (2019-09-21)
 
 ### [1.2.11](https://github.com/overarchingSky/first-taro/compare/v1.2.9...v1.2.11) (2019-09-21)

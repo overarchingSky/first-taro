@@ -1,7 +1,6 @@
 {
   "name": "first-taro",
-  "version": "1.2.12",
-  "private": true,
+  "version": "1.3.0",
   "description": "",
   "templateInfo": {
     "name": "redux",
@@ -13,7 +12,12 @@
       "path": "cz-conventional-changelog"
     }
   },
+  "preferGlobal": true,
+  "bin": {
+    "gen": "script/generate.ts"
+  },
   "scripts": {
+    "t": "node tl",
     "//": "发布版本",
     "commit": "cross-env allowGitCommit=true git commit -m ''",
     "release": "cross-env noVerifyHook=true standard-version",
@@ -52,6 +56,7 @@
     "@tarojs/taro-tt": "1.3.16",
     "@tarojs/taro-weapp": "1.3.16",
     "babel-jest": "^24.9.0",
+    "chalk": "^2.4.2",
     "conventional-changelog-cli": "^2.0.23",
     "dotenv": "^8.1.0",
     "dotenv-expand": "^5.1.0",
