@@ -17,7 +17,7 @@
     "gen": "script/generate.ts"
   },
   "scripts": {
-    "t": "node tl",
+    "lint": "eslint --fix",
     "//": "发布版本",
     "commit": "cross-env allowGitCommit=true git commit -m ''",
     "release": "cross-env noVerifyHook=true standard-version",
@@ -93,22 +93,24 @@
     "eslint": "^5.16.0",
     "eslint-config-taro": "1.3.16",
     "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-react-hooks": "^1.6.1",
     "eslint-plugin-taro": "1.3.16",
     "exit": "^0.1.2",
     "husky": "^3.0.5",
     "jest": "^24.9.0",
+    "prettier": "^1.18.2",
     "standard-version": "^7.0.0",
     "stylelint": "9.3.0",
     "stylelint-config-taro-rn": "1.3.16",
     "stylelint-taro-rn": "1.3.16",
     "ts-jest": "^24.1.0",
-    "typescript": "^3.6.3"
+    "typescript": "^3.5.3"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "lint-staged --config ./.lintstagedrc",
       "prepare-commit-msg": "node ./script/prepare-commit-msg.js"
     }
   },
