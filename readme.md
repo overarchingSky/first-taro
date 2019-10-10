@@ -10,6 +10,11 @@
 - 自动生成changeLog
 - 使用lint-staged只检查当前改动文件格式
 - 测试覆盖率以及报告https://www.kancloud.cn/sllyli/npm-script/1243454 nyc
+- 拓展脚手架，添加自定义命令，生成模板，生成业务模块
+
+
+todo：
+- 支持失效时间的localStorage，支持手动失效的localStorage（失效时间从后端取）
 
 
 HUSKY_SKIP_HOOKS
