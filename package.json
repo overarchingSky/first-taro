@@ -102,7 +102,7 @@
     "eslint-plugin-taro": "1.3.16",
     "exit": "^0.1.2",
     "fs-extra": "^8.1.0",
-    "handlebars": "^4.4.2",
+    "handlebars": "^4.3.0",
     "handlebars-generator": "^3.2.3",
     "husky": "^3.0.5",
     "jest": "^24.9.0",
